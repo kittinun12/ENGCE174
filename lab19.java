@@ -4,24 +4,23 @@ public class lab19 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();      // รับจำนวนข้อมูล
-        int[] arr = new int[N];    // สร้าง array เก็บค่า
+        int N = sc.nextInt();      // จำนวนข้อมูล
+        int[] arr = new int[N];    // สร้าง array
 
-        // รับค่าจำนวนเต็ม N ค่า
+        double sum = 0;            // เก็บผลรวม (ใช้ double กันทศนิยม)
+
+        // รับค่าทั้งหมด
         for (int i = 0; i < N; i++) {
             arr[i] = sc.nextInt();
+            sum += arr[i];
         }
 
-        // หาค่ามากที่สุดเริ่มจากตัวแรก
-        int max = arr[0];
+        // คำนวณค่าเฉลี่ย
+        double avg = sum / N;
 
-        for (int i = 1; i < N; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-        }
+        // แสดงผล
+        System.out.println(avg);
 
-        // แสดงผลค่าที่มากที่สุด
-        System.out.println(max);
+        sc.close();
     }
 }
