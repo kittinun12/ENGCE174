@@ -29,9 +29,9 @@ public class lab114 {
             return;
         }
 
-        // ทิศรอบข้าง 8 ทิศ (rowOffset, colOffset)
+        // ทิศทั้ง 8 ทิศ
         int[] dr = {-1, -1, -1, 0, 0, 1, 1, 1};
-        int[] dc = {-1, 0, 1, -0, 1, -1, 0, 1};
+        int[] dc = {-1, 0, 1, -1, 1, -1, 0, 1};
 
         int count = 0;
 
@@ -40,7 +40,7 @@ public class lab114 {
             int nr = targetR + dr[i];
             int nc = targetC + dc[i];
 
-            // เช็กว่าไม่ออกนอกกรอบ
+            // เช็กกรอบ
             if (nr >= 0 && nr < R && nc >= 0 && nc < C) {
                 if (map[nr][nc] == '*') {
                     count++;
@@ -48,7 +48,7 @@ public class lab114 {
             }
         }
 
-        // แสดงจำนวนระเบิดรอบข้าง
+        // แสดงผล
         System.out.println(count);
     }
 }
