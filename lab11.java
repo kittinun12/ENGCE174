@@ -5,12 +5,13 @@ public class lab11 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter interger");
-        int a = sc.nextInt();   // รับค่าตัวเลขตัวแรก
-        System.out.println("Enter interger too");
-        int b = sc.nextInt();   // รับค่าตัวเลขตัวที่สอง
+        int a = sc.nextInt();   //รับค่าตัวเลขตัวแรก
+        
+        System.out.println("Enter interger again");
+        int b = sc.nextInt();   //รับค่าตัวเลขตัวที่สอง
 
-        int sum = a + b;        // คำนวณผลบวก
+        int sum = a + b;        //คำนวณผลบวก
 
-        System.out.println(sum); // แสดงผล
+        System.out.println(sum); //แสดงผล
     }
 }
