@@ -1,29 +1,19 @@
-/*
- * โปรแกรมคำนวณพื้นที่สี่เหลี่ยมผืนผ้า
- * ผู้ใช้ป้อนค่าความกว้าง (width) และความสูง (height)
- * โปรแกรมจะคำนวณ area = width * height
- * และแสดงผลพื้นที่ออกมาพร้อมรูปแบบที่ชัดเจน
- */
-
 import java.util.Scanner;
 
 public class lab12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // ===== Input Section =====
-        System.out.print("Enter width: ");     // พฤติกรรม I/O ดี
+        // ==ส่วนของการป้อนข้อมูล==
+        System.out.print("Enter width:");
         double width = sc.nextDouble();
 
-        System.out.print("Enter height: ");    // พฤติกรรม I/O ดี
+        System.out.print("Enter height:");
         double height = sc.nextDouble();
-
-        // ===== Process Section =====
-        // คำนวณพื้นที่ด้วยสูตรพื้นฐาน area = width * height
+        
+        // ==ส่วนของการประมวลผลและการแสดงผล==
         double area = width * height;
-
-        // ===== Output Section =====
-        System.out.printf("Rectangle area = %.2f\n", area);
+        System.out.println("Area =" + area);
 
         sc.close();
     }
