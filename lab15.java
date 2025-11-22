@@ -1,11 +1,20 @@
+/*
+ * โปรแกรมแสดงชื่อกาแฟตามหมายเลขเมนู
+ * ผู้ใช้ป้อนหมายเลข 1–4
+ * โปรแกรมจะแสดงชื่อเมนูที่ตรงกับหมายเลข
+ */
+
 import java.util.Scanner;
 
 public class lab15 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int menu = sc.nextInt();   // รับค่าหมายเลขเมนู
+        // ===== Input Section =====
+        System.out.print("Enter menu number (1-4): ");
+        int menu = sc.nextInt();
 
+        // ===== Process & Output Section =====
         if (menu == 1) {
             System.out.println("Americano");
         } 
@@ -19,7 +28,9 @@ public class lab15 {
             System.out.println("Mocha");
         } 
         else {
-            System.out.println("Invalid Menu");
+            System.out.println("Invalid Menu");  // สำหรับค่าที่ไม่อยู่ใน 1–4
         }
+
+        sc.close();
     }
 }
