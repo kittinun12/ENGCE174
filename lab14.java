@@ -1,40 +1,43 @@
-/*
- * โปรแกรมแปลงคะแนนเป็นเกรด A–F
- * ผู้ใช้ป้อนคะแนนตัวเลข (0–100)
- * จากนั้นโปรแกรมตรวจสอบช่วงคะแนนแล้วแสดงผลเกรด
- */
-
 import java.util.Scanner;
 
 public class lab14 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        // Create a Scanner object to receive input from the user
+        Scanner getValue = new Scanner(System.in);
 
-        // ===== Input Section =====
-        System.out.print("Enter score (0-100): ");
-        int score = sc.nextInt();
+        // Display message prompting the user to enter the score
+        System.out.print("Please enter the test score (0-100): ");
 
-        // ===== Process & Output Section =====
-        if (score >= 80 && score <= 100) {
-            System.out.println("A");
-        } 
-        else if (score >= 70) {
-            System.out.println("B");
-        } 
-        else if (score >= 60) {
-            System.out.println("C");
-        } 
-        else if (score >= 50) {
-            System.out.println("D");
-        } 
-        else if (score >= 0) {
-            System.out.println("F");
+        // Receive the score value from the user
+        if (getValue.hasNextInt()) {
+            int score = getValue.nextInt();
+            String grade;
+
+            // Check the score conditions and assign the grade
+            if (score >= 80 && score <= 100) {
+                grade = "A";
+            } else if (score >= 70 && score <= 79) {
+                grade = "B";
+            } else if (score >= 60 && score <= 69) {
+                grade = "C";
+            } else if (score >= 50 && score <= 59) {
+                grade = "D";
+            } else if (score >= 0 && score <= 49) {
+                grade = "F";
+            } else {
+                // Case for scores outside the 0-100 range
+                grade = "Invalid Score";
+            }
+
+            // Display the result
+            System.out.println("Score: " + score);
+            System.out.println("Result (Output): " + grade);
+
+        } else {
+            System.out.println("Invalid input. Please enter an integer.");
         }
-        else {
-            // กรณีคนใส่คะแนนติดลบ หรือเกิน 100
-            System.out.println("Invalid score");
-        }
 
-        sc.close();
+        // Close the Scanner
+        getValue.close();
     }
 }
