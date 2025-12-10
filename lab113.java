@@ -78,5 +78,5 @@ public class lab113 {
 
         // Close the Scanner
         readValue.close();
-    }
+}
 }
