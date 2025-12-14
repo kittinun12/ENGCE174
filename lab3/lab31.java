@@ -7,9 +7,7 @@ class User {
         this.username = un;
     }
 
-    public String getUsername() {
-        return this.username;
-    }
+    public String getUsername() { return this.username; }
 }
 
 public class lab31 {
